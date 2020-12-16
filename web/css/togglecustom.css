@@ -1,0 +1,144 @@
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #32CD32;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .bootstrap-switch .bootstrap-switch-handle-on, .bootstrap-switch .bootstrap-switch-handle-off, .bootstrap-switch .bootstrap-switch-label{
+    height: unset!important;
+  }
+
+
+
+  /* TAP toggle */
+.tap-toggle {
+  margin-bottom: 20px;
+  background-position: center;
+  transition: background 0.8s;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+
+  cursor: pointer;
+  user-select: none;
+  width: 42px;
+  height: 20px;
+  position: relative;
+  /* border: 1px solid grey; */
+  background: rgb(226, 226, 226) 0% 0% no-repeat padding-box;
+  /* padding: 1px; */
+  /* background-color: white; */
+  border-radius: 14px;
+  opacity: 1;
+}
+
+.tap-toggle.disabled {
+  user-select: none;
+  opacity: .5;
+  pointer-events: none !important;
+}
+
+.tp-checked {
+  background: #32CD32 0% 0% no-repeat padding-box;
+}
+.tap-toggle::after {
+  content: "";
+  border-radius: 14px;
+  position: absolute;
+  /* width: 17px; */
+  animation: .1s linear 0s slide-right;
+  z-index: 9999;
+  /* height: 17px; */
+  background: #FCFCFC 0% 0% no-repeat padding-box;
+  /* box-shadow: 0px 2px 5px #00000029; */
+  /* opacity: 1; */
+  height: 13px;
+  width: 13px;
+  bottom: 4px;
+  margin-left: 4px;
+  /* left: 4px; */
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.tap-toggle.tp-checked::after {
+  right: 4px;
+  animation: .1s linear 0s slide-left;
+}
+
+@keyframes slide-left {
+  from {
+    right: 20px;
+  }
+
+  to {
+    right: 0;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    left: 20px;
+  }
+
+  to {
+    left: 0px;
+  }
+}
+

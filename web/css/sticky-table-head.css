@@ -1,0 +1,9 @@
+.floater{
+    background-color: red;
+    position: fixed;
+    top: 100;
+    z-index: 9999999999;
+}
+.content-wrapper{
+    position: relative;
+}

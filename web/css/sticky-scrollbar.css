@@ -1,0 +1,75 @@
+/* Style scrollbar */
+::-webkit-scrollbar {
+    height: 19px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #E1E1E1;
+    /* border-radius: 3px; */
+}
+
+::-webkit-scrollbar-thumb {
+    height: 19px;
+    background: #fdfdff linear-gradient(180deg, #fdfdff 0%, #fdfdff 100%) 0% 0% no-repeat padding-box;
+    border: 1px solid #D8D8D8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ebebeb linear-gradient(180deg, #ebebeb 0%, #ebebeb 100%) 0% 0% no-repeat padding-box;
+}
+
+::-webkit-scrollbar-button:single-button {
+    background-color: #ffffff;
+    display: block;
+    height: 13px;
+    border: 1px solid #E1E1E1;
+    width: 16px;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-width: 0 8px 8px 8px;
+    border-color: transparent transparent #eee transparent;
+}
+
+::-webkit-scrollbar-button:single-button:horizontal:increment {
+    border-width: 8px 0 8px 8px;
+    border-color: transparent transparent transparent #eee;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-width: 8px 8px 0 8px;
+    border-color: #eee transparent transparent transparent;
+}
+
+::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    border-width: 8px 8px 8px 0;
+    border-color: transparent #eee transparent transparent;
+}
+
+
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    border-color: transparent transparent #00923F transparent;
+}
+
+/* Biar bisa scroll */
+.scrollable {
+    margin-bottom: 10px;
+    overflow-x: auto;
+}
+
+.table td:not(:first-child) {
+    min-width: 150px;
+}
+.collapse-tr{
+    min-height: 500px;
+}
+.table-responsive {
+    overflow: auto;
+    position: relative;
+    background-color: transparent;
+}
+
+.table {
+    position: relative;
+}
+thead{
+    background-color: #fff!important;
+  }
